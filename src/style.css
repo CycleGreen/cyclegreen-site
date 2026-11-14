@@ -271,3 +271,69 @@ a {
 .stage-current .stage-label { font-weight: 600; color: var(--forest); }
 .stage h3 { margin-block: 12px 8px; font-size: 1.5rem; font-weight: 400; }
 .stage p:last-child { font-size: 0.9375rem; color: var(--muted); }
+/* ===== Pilot with us ===== */
+.pilot { padding-block: 96px; background: var(--forest); color: var(--cream); }
+.pilot-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 48px 80px;
+}
+.pilot-intro { flex: 1 1 360px; }
+.pilot .section-title { color: var(--cream); }
+.eyebrow-sand { color: var(--sand); }
+.pilot-lead { max-width: 440px; color: #e6e2d8; }
+.pilot-note { margin-top: 20px; font-size: 0.875rem; color: #d9d4c7; }
+
+.pilot-form {
+  flex: 1 1 420px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field-full { grid-column: 1 / -1; }
+.field label { font-size: 0.875rem; color: var(--cream); }
+.field input,
+.field textarea {
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+}
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus,
+.field textarea:focus { outline: 2px solid var(--sand); outline-offset: 2px; }
+
+.btn-sand {
+  justify-self: start;
+  border: 0;
+  background: var(--sand);
+  color: var(--forest);
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn-sand:hover { background: #ecc893; }
+.form-status { grid-column: 1 / -1; font-size: 0.9375rem; }
+.form-note { grid-column: 1 / -1; font-size: 0.8125rem; color: #d9d4c7; }
+
+@media (max-width: 560px) {
+  .pilot-form { grid-template-columns: 1fr; }
+}
+
+/* ===== Footer ===== */
+.site-footer { background: var(--cream); border-top: 1px solid var(--line); }
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-block: 28px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.footer-inner a { color: var(--forest); }

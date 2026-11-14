@@ -167,10 +167,53 @@
           </ol>
         </div>
       </section>
-      <!-- Next sections go here: How it works, Who it's for, What CycleGreen is not, Where we are, Pilot -->
+            <section class="pilot" id="pilot">
+        <div class="container pilot-inner">
+          <div class="pilot-intro">
+            <p class="eyebrow eyebrow-sand">05 / Pilot with us</p>
+            <h2 class="section-title">Run a restoration programme?<br />Let's talk.</h2>
+            <p class="pilot-lead">
+              We're looking for a small pilot to learn what works in the field. Tell us about your
+              programme, your communities and the records you keep today.
+            </p>
+            <p class="pilot-note">A first conversation, not a commitment.</p>
+          </div>
+
+          <form class="pilot-form" id="pilot-form">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="f-org">Organisation</label>
+              <input id="f-org" name="organisation" type="text" autocomplete="organization" placeholder="Programme or organisation" />
+            </div>
+            <div class="field field-full">
+              <label for="f-contact">Email or phone</label>
+              <input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="How can we reach you?" required />
+            </div>
+            <div class="field field-full">
+              <label for="f-message">What do you track today?</label>
+              <textarea id="f-message" name="message" placeholder="Tell us about your current records."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-sand">Start a conversation</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">Please don't include sensitive community or personal data.</p>
+          </form>
+        </div>
+      </section>
+      
     </main>
 
-    <footer class="site-footer"></footer>
+       <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>CycleGreen · Restoration you can trace</p>
+        <p>
+          <a href="mailto:cyclegreen.zm@gmail.com">cyclegreen.zm@gmail.com</a> · Zambia
+        </p>
+      </div>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
