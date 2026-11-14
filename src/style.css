@@ -250,3 +250,24 @@ a {
   content: "—";
   color: var(--ochre);
 }
+/* ===== Where we are ===== */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.stage { padding-top: 16px; border-top: 1px solid var(--line); }
+.stage-current { border-top: 2px solid var(--forest); }
+.stage-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.stage-current .stage-label { font-weight: 600; color: var(--forest); }
+.stage h3 { margin-block: 12px 8px; font-size: 1.5rem; font-weight: 400; }
+.stage p:last-child { font-size: 0.9375rem; color: var(--muted); }
