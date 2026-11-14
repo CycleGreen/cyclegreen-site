@@ -18,19 +18,23 @@
     />
   </head>
   <body>
-    <header class="site-header">
+      <header class="site-header">
       <div class="container nav">
         <a href="#top" class="nav-logo" aria-label="CycleGreen home">
           <img src="/logo/cyclegreen-logo-light.svg" alt="CycleGreen" height="32" />
         </a>
-        <nav aria-label="Main">
+        <nav id="site-nav" aria-label="Main">
           <ul class="nav-links">
             <li><a href="#how">How it works</a></li>
             <li><a href="#who">Who it's for</a></li>
             <li><a href="#status">Where we are</a></li>
+            <li class="nav-pilot-mobile"><a href="#pilot">Pilot with us</a></li>
           </ul>
         </nav>
-        <a href="#pilot" class="btn btn-primary">Pilot with us</a>
+        <a href="#pilot" class="btn btn-primary nav-cta">Pilot with us</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 

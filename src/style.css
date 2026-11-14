@@ -185,11 +185,7 @@ a {
 .example-list span { color: var(--forest); font-weight: 600; }
 .example-list .pending span { color: var(--ochre); }
 
-/* ===== Phones (a proper menu comes in step 5) ===== */
-@media (max-width: 760px) {
-  .nav-links { display: none; }
-  .hero-inner { padding-block: 64px; }
-}
+
 /* ===== Shared section styles ===== */
 .section { padding-block: 96px; }
 .section-alt { background: var(--mist); }
@@ -337,3 +333,62 @@ a {
   color: var(--muted);
 }
 .footer-inner a { color: var(--forest); }
+/* ===== Smooth scrolling (and stop the sticky header covering headings) ===== */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 80px; }
+
+/* ===== Menu button + mobile-only link (hidden on desktop) ===== */
+.menu-toggle,
+.nav-pilot-mobile { display: none; }
+
+/* ===== Phones and small tablets ===== */
+@media (max-width: 760px) {
+  .nav-cta { display: none; }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--forest);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  /* turn ☰ into ✕ when open */
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  #site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+  #site-nav.is-open { display: block; }
+
+  .nav-links { flex-direction: column; gap: 0; padding: 8px 24px 16px; }
+  .nav-links a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav-pilot-mobile { display: block; }
+  .nav-pilot-mobile a { font-weight: 600; color: var(--forest); border-bottom: 0; }
+
+  .hero-inner { padding-block: 56px; }
+  .example-card { flex-basis: 100%; }
+  .section,
+  .pilot { padding-block: 64px; }
+  .mission { padding-block: 56px; }
+}
