@@ -18,14 +18,52 @@
     />
   </head>
   <body>
-    <header class="site-header"></header>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="nav-logo" aria-label="CycleGreen home">
+          <img src="/logo/cyclegreen-logo-light.svg" alt="CycleGreen" height="32" />
+        </a>
+        <nav aria-label="Main">
+          <ul class="nav-links">
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#who">Who it's for</a></li>
+            <li><a href="#status">Where we are</a></li>
+          </ul>
+        </nav>
+        <a href="#pilot" class="btn btn-primary">Pilot with us</a>
+      </div>
+    </header>
 
     <main>
-      <div class="container" style="padding: 64px 0">
-        <p class="eyebrow">Step 2 check</p>
-        <h1>Restoration you can trace.</h1>
-        <p>If the heading is a serif and this text is a clean sans-serif, the fonts work.</p>
-      </div>
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow eyebrow-light">In development · Zambia</p>
+            <h1>Restoration<br />you can trace.</h1>
+            <p class="hero-lead">
+              A shared record of restoration work, human reviews, tree survival and the
+              benefits communities were promised.
+            </p>
+            <div class="hero-actions">
+              <a href="#pilot" class="btn btn-light">Explore a pilot</a>
+              <a href="#how" class="btn btn-outline-light">See how it works</a>
+            </div>
+            <p class="hero-note">Starting with trees. Built for accountability.</p>
+          </div>
+
+          <aside class="example-card" aria-label="Illustrative example of a site record">
+            <p class="eyebrow">Illustrative example</p>
+            <h2 class="example-title">Site A · 420 trees planted</h2>
+            <ul class="example-list">
+              <li><span aria-hidden="true">✓</span> Planting reviewed: Approved</li>
+              <li><span aria-hidden="true">✓</span> Tranche 1 (50%): Paid</li>
+              <li class="pending"><span aria-hidden="true">◷</span> Tranche 2 (30%): After 12-month check</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Next sections go here: How it works, Who it's for, What CycleGreen is not, Where we are, Pilot -->
     </main>
 
     <footer class="site-footer"></footer>
